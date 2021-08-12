@@ -1,0 +1,3 @@
+sudo /opt/lampp/lampp start
+
+// https://developer.wordpress.org/reference/functions/register_new_user/
