@@ -12,6 +12,8 @@
    </script>
    <script src="js/funciones.js" type="text/javascript">
    </script>
+   <script src="js/formulario_bebe.js" type="text/javascript">
+   </script>
    <style>
       html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
    </style>

@@ -22,7 +22,9 @@
             </div>
          </div>
       </div>
-      <script src="js/js.js" type="text/javascript">
-      </script>
+   <!--    <script src="js/js.js" type="text/javascript">
+      </script> -->
+
+      <?php include_once "comp/javascripr_exe.php";?>
    </body>
 </html>

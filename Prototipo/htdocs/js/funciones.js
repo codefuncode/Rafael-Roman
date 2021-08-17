@@ -175,27 +175,27 @@ function fun_registrase(argument) {
 
 				let existe_usuario = document.getElementById('existe_usuario');
 				let error_server = document.getElementById('error_server');
-				let bienvenida_inicio = document.getElementById('bienvenida_inicio');
+				let inicia_sesion = document.getElementById('inicia_sesion');
 				let registo = document.getElementById('registo');
 				let inicio = document.getElementById('inicio');
 				let btn_muenu_usuario = document.getElementById('btn_muenu_usuario');
 				existe_usuario.style.display = "none";
 				error_server.style.display = "none";
-				bienvenida_inicio.style.display = "none";
+				inicia_sesion.style.display = "none";
 				btn_muenu_usuario.style.display = "none";
 
 
 				if (obj.respuesta == "existe") {
 					existe_usuario.style.display = "block";
 					error_server.style.display = "none";
-					bienvenida_inicio.style.display = "none";
+					inicia_sesion.style.display = "none";
 					registo.style.display = "none";
 					inicio.style.display = "none";
 
 				} else if (obj.respuesta == "error") {
 					existe_usuario.style.display = "none";
 					error_server.style.display = "block";
-					bienvenida_inicio.style.display = "none";
+					inicia_sesion.style.display = "none";
 					registo.style.display = "none";
 					inicio.style.display = "none";
 				} else if (obj.respuesta == "insertado") {
@@ -204,7 +204,7 @@ function fun_registrase(argument) {
 					inicio.style.display = "none";
 					existe_usuario.style.display = "none";
 					error_server.style.display = "none";
-					bienvenida_inicio.style.display = "block";
+					inicia_sesion.style.display = "block";
 					btn_muenu_usuario.style.display = "block";
 
 				}
@@ -257,34 +257,55 @@ function inicio_de_sesion(argument) {
 
 				console.log(resultado);
 
-				// const json = resultado;
-				// const obj = JSON.parse(json);
+				const json = resultado;
+				const obj = JSON.parse(json);
 
-				// console.log(obj.respuesta);
+				console.log(obj.respuesta);
+
+				if (obj.respuesta == 1) {
+					// alert("logeado");
+
+					let formulario_bebe = document.querySelector(".formulario_bebe");
+					let imagenes_galeria = document.querySelector(".imagenes_galeria");
+
+					let inicio = document.getElementById('inicio');
+					let bienvenida_inicio = document.getElementById('bienvenida_inicio');
+					let btn_muenu_usuario = document.getElementById('btn_muenu_usuario');
+
+					// let menu_navegacion=
+					// imagenes_galeria.style.display = "none";
+					inicio.style.display = "none";
+
+					// formulario_bebe.style.display = "block";
+					bienvenida_inicio.style.display = "block";
+					btn_muenu_usuario.style.display = "block";
+				} else if (obj.respuesta == 0) {
+					alert("No esta logeado");
+				}
 
 				// let existe_usuario = document.getElementById('existe_usuario');
 				// let error_server = document.getElementById('error_server');
-				// let bienvenida_inicio = document.getElementById('bienvenida_inicio');
+				// let inicia_sesion = document.getElementById('inicia_sesion');
 				// let registo = document.getElementById('registo');
 				// let inicio = document.getElementById('inicio');
 				// let btn_muenu_usuario = document.getElementById('btn_muenu_usuario');
 				// existe_usuario.style.display = "none";
 				// error_server.style.display = "none";
-				// bienvenida_inicio.style.display = "none";
+				// inicia_sesion.style.display = "none";
 				// btn_muenu_usuario.style.display = "none";
 
 
 				// if (obj.respuesta == "existe") {
 				// 	existe_usuario.style.display = "block";
 				// 	error_server.style.display = "none";
-				// 	bienvenida_inicio.style.display = "none";
+				// 	inicia_sesion.style.display = "none";
 				// 	registo.style.display = "none";
 				// 	inicio.style.display = "none";
 
 				// } else if (obj.respuesta == "error") {
 				// 	existe_usuario.style.display = "none";
 				// 	error_server.style.display = "block";
-				// 	bienvenida_inicio.style.display = "none";
+				// 	inicia_sesion.style.display = "none";
 				// 	registo.style.display = "none";
 				// 	inicio.style.display = "none";
 				// } else if (obj.respuesta == "insertado") {
@@ -293,7 +314,7 @@ function inicio_de_sesion(argument) {
 				// 	inicio.style.display = "none";
 				// 	existe_usuario.style.display = "none";
 				// 	error_server.style.display = "none";
-				// 	bienvenida_inicio.style.display = "block";
+				// 	inicia_sesion.style.display = "block";
 				// 	btn_muenu_usuario.style.display = "block";
 
 				// }

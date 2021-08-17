@@ -6,16 +6,19 @@ function w3_open() {
 	let overlayBg = document.getElementById("myOverlay");
 	let main = document.getElementById("main");
 	if (mySidebar.style.display === 'block') {
+		console.log('w3_open block');
 		mySidebar.style.display = 'none';
 		overlayBg.style.display = "none";
 		// mySidebar.style.width = "0px";
 		mySidebar.style.width = "0px";
-		// main.style.marginLeft = "300px";
+		main.style.marginLeft = "0px";
 	} else {
+		console.log("w3_open none");
 		mySidebar.style.display = 'block';
 		overlayBg.style.display = "block";
 		mySidebar.style.width = "300px";
-		// main.style.marginLeft = "3000px";
+		// main.style.marginLeft = "0px";
+		main.style.marginLeft = "300px";
 	}
 }
 
@@ -54,6 +57,8 @@ newImg.onload = function() {
 
 	fun_registrase();
 	inicio_de_sesion();
+
+	modal_bagregar_bebe();
 
 	let binbenida_usuario = document.querySelectorAll(".binbenida_usuario");
 	console.log(binbenida_usuario);
