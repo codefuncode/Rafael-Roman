@@ -6,16 +6,24 @@
             <span class="w3-button w3-xlarge w3-hover-red w3-display-topright" onclick="document.getElementById('existe_usuario').style.display='none'" title="Close Modal">
                ×
             </span>
-         </div>
-         <div class="w3-container">
+            <img alt="Avatar" class="w3-circle w3-margin-top" src="./img/usuario_existe.png" style="width:30%"/>
             <h5>
-               Existe
+               Este usuario ya esta registrado
             </h5>
-            <p>
-               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel non est deleniti sed nam dolores consequatur ullam tempora recusandae eos sequi, beatae similique autem obcaecati quos asperiores ducimus id laboriosam!
-            </p>
-
-            <button class="w3-button w3-block w3-teal">Button</button>
+         </div>
+         <div class="w3-container" style="padding-top: 20%;">
+            <div class="w3-container w3-border-top w3-light-grey">
+               <span class="w3-left w3-padding">
+                  <button class="w3-button w3-red btn_existe_inicio_sesion" type="button">
+                     Inicio
+                  </button>
+               </span>
+               <span class="w3-right w3-padding ">
+                  <button class="w3-button w3-orange btn_existe_registrtrse" type="button">
+                     Registrase
+                  </button>
+               </span>
+            </div>
          </div>
       </div>
    </div>

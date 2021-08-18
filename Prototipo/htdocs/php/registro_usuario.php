@@ -30,11 +30,11 @@ function inserta_usuario()
                ':pass',
                $pass);
 
-            $stmt->execute();
+            if ($stmt->execute()) {
+               $last_id = $conn->lastInsertId();
+               crear_cliente_de_usuario($last_id);
 
-            $resultado = array("respuesta" => "insertado");
-
-            echo json_encode($resultado);
+            }
 
          } catch (PDOException $e) {
             $resultado = array("respuesta" => "error");
@@ -121,6 +121,32 @@ function existencia_usuario()
       echo json_encode($resultado);
    }
 
+}
+
+function crear_cliente_de_usuario($id)
+{
+   include "../conn/conn.php";
+   try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      // set the PDO error mode to exception
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      // prepare sql and bind parameters
+      $stmt = $conn->prepare(
+         "INSERT INTO cliente (id_usuario)
+         VALUES (:id_usuario)");
+      $stmt->bindParam(':id_usuario', $id);
+
+      if ($stmt->execute()) {
+         $resultado = array("respuesta" => "insertado");
+
+         echo json_encode($resultado);
+      }
+
+   } catch (PDOException $e) {
+      echo "Error: " . $e->getMessage();
+   }
+   $conn = null;
 }
 existencia_usuario();
 

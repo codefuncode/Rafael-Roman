@@ -9,10 +9,10 @@
             <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();" style="display:none;" id="btn_muenu_usuario">
                <i class="fa fa-bars">
                </i>
-               Menu
+               Menú
             </button>
-            <span class="w3-bar-item w3-right">
-               Inicio
+            <span class="w3-bar-item w3-right" id="cierra_sesion">
+              Cerrar sesión
             </span>
          </div>
          <?php include_once 'comp/nav.php';?>

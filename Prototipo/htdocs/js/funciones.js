@@ -264,7 +264,12 @@ function inicio_de_sesion(argument) {
 
 				if (obj.respuesta == 1) {
 					// alert("logeado");
+					console.log(obj.datos[0]);
+					console.log(obj.datos[0]['idusuario']);
+					console.log(obj.datos[0]['nombre_usuario']);
+					// console.log(obj.datos[0]['']);
 
+					// Object { 0: "19", 1: "admin", 2: null, 3: "1111", idusuario: "19", nombre_usuario: "admin", correo: null, pass: "1111" }
 					let formulario_bebe = document.querySelector(".formulario_bebe");
 					let imagenes_galeria = document.querySelector(".imagenes_galeria");
 
@@ -279,6 +284,11 @@ function inicio_de_sesion(argument) {
 					// formulario_bebe.style.display = "block";
 					bienvenida_inicio.style.display = "block";
 					btn_muenu_usuario.style.display = "block";
+					localStorage.setItem('idusuario', obj.datos[0]['idusuario']);
+					console.log('idusuario es');
+					console.log(localStorage.getItem("idusuario"));
+
+
 				} else if (obj.respuesta == 0) {
 					alert("No esta logeado");
 				}

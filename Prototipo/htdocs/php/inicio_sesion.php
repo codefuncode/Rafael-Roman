@@ -32,9 +32,11 @@ function existencia_usuario()
             // $email     = "john@example.com";
             $stmt->execute();
 
-            $count = $stmt->rowCount();
-
-            $resultado = array("respuesta" => $count);
+            $count     = $stmt->rowCount();
+            $result    = $stmt->fetchAll();
+            $resultado = array(
+               "respuesta" => $count,
+               "datos"     => $result);
 
             echo json_encode($resultado);
 
