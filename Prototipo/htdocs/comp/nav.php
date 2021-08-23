@@ -31,21 +31,54 @@
          </h5>
       </div>
       <div class="w3-bar-block">
-         <a class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" href="#" onclick="w3_close()" title="close menu">
+         <!--      <a class="w3-bar-item w3-button w3-padding-16 w3-dark-grey w3-hover-black" href="#"  title="close menu">
             <i class="fa fa-remove fa-fw">
             </i>
             Close Menu
+         </a> -->
+         <a class="w3-bar-item w3-button w3-padding btn_perfil_usuario" href="#">
+            Perfil
          </a>
-         <a class="w3-bar-item w3-button w3-padding" href="#">
+         <a class="w3-bar-item w3-button w3-padding btn_nav_registro_bebe" href="#">
             Registro de bebe
          </a>
          <a class="w3-bar-item w3-button w3-padding" href="#">
             Lactancia del bebe
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            listado de bebes
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            Ver reportes
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            xxxxxxxxxxxxxx
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            xxxxxxxxxxxxxx
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            xxxxxxxxxxxxxx
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            xxxxxxxxxxxxxx
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            xxxxxxxxxxxxxx
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            xxxxxxxxxxxxxx
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            xxxxxxxxxxxxxx
+         </a>
+         <a class="w3-bar-item w3-button w3-padding" href="#">
+            xxxxxxxxxxxxxx
          </a>
          <br/>
          <br/>
       </div>
    </div>
 </nav>
-<div class="w3-overlay w3-hide-large w3-animate-opacity" id="myOverlay" onclick="w3_close()" style="cursor:pointer" title="close side menu">
+<div class="w3-overlay w3-hide-large w3-animate-opacity" id="myOverlay" style="cursor:pointer" title="close side menu">
 </div>

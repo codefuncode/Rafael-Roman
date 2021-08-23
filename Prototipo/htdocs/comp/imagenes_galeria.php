@@ -1,4 +1,4 @@
-<div class="w3-container imagenes_galeria">
+<div class="w3-container imagenes_galeria all_user_panel">
 <div class="w3-container">
    <h1>
       Productos

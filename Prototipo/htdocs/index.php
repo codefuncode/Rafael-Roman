@@ -6,13 +6,22 @@
          <!-- Top container -->
          <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
             <!-- w3-hide-large -->
-            <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();" style="display:none;" id="btn_muenu_usuario">
-               <i class="fa fa-bars">
-               </i>
-               Menú
-            </button>
+            <span class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey" id="btn_muenu_usuario" onclick="w3_open();" style="display:none;">
+               <!--  <i class="fa fa-bars">
+               </i> -->
+               <button class="w3-btn w3-ripple w3-green">
+                  Menú
+               </button>
+            </span>
             <span class="w3-bar-item w3-right" id="cierra_sesion">
-              Cerrar sesión
+               <button class="w3-btn w3-ripple w3-red">
+                  Cerrar sesión
+               </button>
+            </span>
+            <span class="w3-bar-item w3-right" id="btn_inicia_sesion" style="display:none">
+               <button class="w3-btn w3-ripple w3-red">
+                  Inicia sesión
+               </button>
             </span>
          </div>
          <?php include_once 'comp/nav.php';?>
@@ -22,9 +31,8 @@
             </div>
          </div>
       </div>
-   <!--    <script src="js/js.js" type="text/javascript">
+      <!--    <script src="js/js.js" type="text/javascript">
       </script> -->
-
       <?php include_once "comp/javascripr_exe.php";?>
    </body>
 </html>

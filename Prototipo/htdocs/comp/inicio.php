@@ -1,6 +1,6 @@
 <div class="w3-container">
-   <div class="w3-modal all_modal" id="inicio" style="display:none;">
-      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+   <div class="w3-modal all_modal" id="inicio" style="display:none; ;">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px;margin-bottom: 100px">
          <div class="w3-center">
             <br/>
             <span class="w3-button w3-xlarge w3-hover-red w3-display-topright" onclick="document.getElementById('inicio').style.display='none'" title="Close Modal">
@@ -42,7 +42,7 @@
          </div>
          <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
             <span class="w3-left w3-padding">
-               <button class="w3-button w3-red" onclick="document.getElementById('inicio').style.display='none'" type="button">
+               <button class="w3-button w3-red" id="btn_inicio_cancel" type="button">
                   Cancel
                </button>
             </span>

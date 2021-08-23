@@ -1,10 +1,10 @@
-<div class="formulario_bebe">
+<div class="formulario_bebe all_user_panel">
    <div class="container-fluid">
       <!-- Page Heading -->
-      <h1 class="h3 mb-4 text-gray-800">
+      <h1 class="h3 mb-4 text-gray-800" style="margin-top: 25px;">
          Registro del bebe
       </h1>
-      <form class="w3-container w3-light-grey">
+      <div class="w3-container w3-light-grey form_formulario_bebe">
          <div class="w3-border-top w3-margin-bottom w3-padding-16">
             <p>
                ingresa los datos del bebe
@@ -76,6 +76,6 @@
                <input class="w3-input w3-border w3-round" name="peso_bebe" type="number"/>
             </p>
          </div>
-      </form>
+      </div>
    </div>
 </div>
