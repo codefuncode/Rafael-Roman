@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-08-2021 a las 19:24:19
+-- Tiempo de generación: 23-08-2021 a las 21:09:43
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 7.4.20
 
@@ -44,12 +44,13 @@ CREATE TABLE `bebe` (
 
 CREATE TABLE `cliente` (
   `id_cliente` int(11) NOT NULL,
-  `nombre_cliente` varchar(10) NOT NULL,
+  `nombre_cliente` varchar(10) DEFAULT NULL,
   `apellido_cliente_paterno` varchar(10) DEFAULT NULL,
   `apellido_cliente_materno` varchar(10) DEFAULT NULL,
-  `id_etapa` int(11) NOT NULL,
+  `id_etapa` int(11) DEFAULT NULL,
   `fecha_regreso` date DEFAULT NULL,
-  `id_genero` int(11) NOT NULL
+  `id_genero` int(11) DEFAULT NULL,
+  `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -85,6 +86,29 @@ CREATE TABLE `etapa_cliente` (
 CREATE TABLE `genero` (
   `id_genero` int(11) NOT NULL,
   `tipo_genero` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `opciones`
+--
+
+CREATE TABLE `opciones` (
+  `id_opcion` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `opcopn_usuario`
+--
+
+CREATE TABLE `opcopn_usuario` (
+  `id_usuario` int(11) NOT NULL,
+  `id_opcion` int(11) NOT NULL,
+  `valor` varchar(11) NOT NULL DEFAULT 'si'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -130,17 +154,9 @@ CREATE TABLE `tipo_medida` (
 CREATE TABLE `usuario` (
   `idusuario` int(11) NOT NULL,
   `nombre_usuario` varchar(255) NOT NULL,
-  `correo` varchar(255) NOT NULL,
+  `correo` varchar(255) DEFAULT NULL,
   `pass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `usuario`
---
-
-INSERT INTO `usuario` (`idusuario`, `nombre_usuario`, `correo`, `pass`) VALUES
-(1, 's', 'f', 'g'),
-(2, 's', 's', 's');
 
 --
 -- Índices para tablas volcadas
@@ -156,7 +172,8 @@ ALTER TABLE `bebe`
 -- Indices de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`id_cliente`);
+  ADD PRIMARY KEY (`id_cliente`),
+  ADD UNIQUE KEY `idusuario` (`id_usuario`);
 
 --
 -- Indices de la tabla `estado_etapa`
@@ -175,6 +192,12 @@ ALTER TABLE `etapa_cliente`
 --
 ALTER TABLE `genero`
   ADD PRIMARY KEY (`id_genero`);
+
+--
+-- Indices de la tabla `opciones`
+--
+ALTER TABLE `opciones`
+  ADD PRIMARY KEY (`id_opcion`);
 
 --
 -- Indices de la tabla `tipo_lactancia`
@@ -227,6 +250,12 @@ ALTER TABLE `etapa_cliente`
 --
 ALTER TABLE `genero`
   MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `opciones`
+--
+ALTER TABLE `opciones`
+  MODIFY `id_opcion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_lactancia`
