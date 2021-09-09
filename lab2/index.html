@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+      <script type="text/javascript">
+         function showinfo(panelIndex, colorCode) {
+
+					var button = document.querySelectorAll(".tab .button button");
+					var tabinfo = document.querySelectorAll(".tab .tabinfo");
+
+					button.forEach(function(node) {
+
+					node.style.backgroundColor = "";
+					node.style.color = "";
+
+					});
+
+					button[panelIndex].style.backgroundColor = colorCode;
+					button[panelIndex].style.color = "white";
+
+					tabinfo.forEach(function(node) {
+					node.style.display = "none";
+					});
+					
+					tabinfo[panelIndex].style.display = "block";
+					tabinfo[panelIndex].style.backgroundColor = colorCode;
+					}
+      </script>
+      <title>
+         Document
+      </title>
+   </head>
+   <body>
+      <div class="tab">
+         <div class="button">
+            <button onclick="showinfo(0,'blue')">
+               JavaScript
+            </button>
+            <button onclick="showinfo(1,'red')">
+               AJAX
+            </button>
+            <button onclick="showinfo(2,'green')">
+               PHP
+            </button>
+         </div>
+         <div class="content">
+            <div class="tabinfo">
+               <td class="t">
+                  JavaScript
+               </td>
+               <td>
+                  This is a text-based programing lenguage where can be use for the user side and the server also can make more interactive elements inside the website.
+                  <br/>
+                  Examples of Website created on javascript:
+                  <br/>
+                  1.
+                  <a href="https://www.google.com/" target="_blank">
+                     Google
+                  </a>
+                  2.
+                  <a href="https://www.youtube.com/" target="_blank">
+                     YouTube
+                  </a>
+                  3.
+                  <a href="https://www.amazon.com/" target="_blank">
+                     Amazon
+                  </a>
+               </td>
+            </div>
+         </div>
+         <div class="tabinfo">
+            <td class="t">
+               AJAX
+            </td>
+            <td>
+               Is a programing lenguage where enhance javascript also give you the oportunity to create a faster website and a way that reduces page refresh or full page reload for any data entered from the user.
+               <br/>
+               Examples of Website created on javascript:
+               <br/>
+               1.
+               <a href="https://24sevenofficeus.com/" target="_blank">
+                  24sevenoffice
+               </a>
+               2.
+               <a href="https://www.apple.com/store " target="_blank">
+                  Apple Store
+               </a>
+               3.
+               <a href=" https://mail.google.com/ " target="_blank">
+                  Gmail
+               </a>
+            </td>
+         </div>
+         <div class="tabinfo">
+            <td class="t">
+               PHP
+            </td>
+            <td>
+               This lenguage makes more easy the functionalities on the website without needing call other external files or data.
+               <br/>
+               Examples of Website created on PHP:
+               <br/>
+               1.
+               <a href="https://www.facebook.com/" target="_blank">
+                  Facebook
+               </a>
+               2.
+               <a href="https://mailchimp.com/es/ " target="_blank">
+                  MailChimp
+               </a>
+               3.
+               <a href=" https://wordpress.com/" target="_blank">
+                  WordPress
+               </a>
+            </td>
+         </div>
+      </div>
+   </body>
+</html>
