@@ -6,26 +6,26 @@
       <script type="text/javascript">
          function showinfo(panelIndex, colorCode) {
 
-					var button = document.querySelectorAll(".tab .button button");
-					var tabinfo = document.querySelectorAll(".tab .tabinfo");
+         var button = document.querySelectorAll(".tab .button button");
+         var tabinfo = document.querySelectorAll(".tab .tabinfo");
 
-					button.forEach(function(node) {
+         button.forEach(function(node) {
 
-					node.style.backgroundColor = "";
-					node.style.color = "";
+         node.style.backgroundColor = "";
+         node.style.color = "";
 
-					});
+         });
 
-					button[panelIndex].style.backgroundColor = colorCode;
-					button[panelIndex].style.color = "white";
+         button[panelIndex].style.backgroundColor = colorCode;
+         button[panelIndex].style.color = "white";
 
-					tabinfo.forEach(function(node) {
-					node.style.display = "none";
-					});
-					
-					tabinfo[panelIndex].style.display = "block";
-					tabinfo[panelIndex].style.backgroundColor = colorCode;
-					}
+         tabinfo.forEach(function(node) {
+         node.style.display = "none";
+         });
+
+         tabinfo[panelIndex].style.display = "block";
+         tabinfo[panelIndex].style.backgroundColor = colorCode;
+         }
       </script>
       <title>
          Document
